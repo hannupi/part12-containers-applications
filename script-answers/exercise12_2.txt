@@ -1,0 +1,23 @@
+Script started on 2022-07-06 18:26:03+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="120" LINES="30"]
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ docker run -it ubuntu bash
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ sudo !!
+sudo docker run -it ubuntu bash
+[sudo] password for dft: 
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K405f018f9d1d: Pulling fs layer [1B[1A[2K405f018f9d1d: Downloading [>                                                  ]  310.5kB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==========>                                        ]  6.572MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [======================>                            ]  13.42MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [===================================>               ]  21.85MB/30.42MB[1B[1A[2K405f018f9d1d: Download complete [1B[1A[2K405f018f9d1d: Extracting [>                                                  ]  327.7kB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [=========>                                         ]  5.571MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [===============>                                   ]  9.175MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [=======================>                           ]  14.42MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [===================================>               ]  21.63MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [===========================================>       ]  26.54MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [================================================>  ]  29.49MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [==================================================>]  30.42MB/30.42MB[1B[1A[2K405f018f9d1d: Pull complete [1BDigest: sha256:b6b83d3c331794420340093eb706a6f152d9c1fa51b262d9bf34594887c2c7ac
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@9f94474f63ea: /root@9f94474f63ea:/# [K]0;root@9f94474f63ea: /root@9f94474f63ea:/# mkdir /usr/src/app
+[?2004l[?2004h]0;root@9f94474f63ea: /root@9f94474f63ea:/# touch /usr/src/app/index.js
+[?2004l[?2004h]0;root@9f94474f63ea: /root@9f94474f63ea:/# [Kexit
+[?2004lexit
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ l
+exercise12_1.txt  exercise12_2.txt
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ cat exe3e[K[Krcise12_2.txt 
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ exit
+exit
+
+Script done on 2022-07-06 18:26:45+03:00 [COMMAND_EXIT_CODE="0"]

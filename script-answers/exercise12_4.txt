@@ -1,0 +1,11 @@
+Script started on 2022-07-06 19:55:05+03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="120" LINES="30"]
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ exitsudo docker start -i funny_mendeleevexit[Ksudo docker start -i funny_mendeleev
+[sudo] password for dft: 
+[?2004h]0;root@9f94474f63ea: /root@9f94474f63ea:/# [K]0;root@9f94474f63ea: /root@9f94474f63ea:/# [7mnode /usr/src/app/index.js[27mnode /usr/src/app/index.js
+[?2004lhello world
+[?2004h]0;root@9f94474f63ea: /root@9f94474f63ea:/# [Kewx  xit
+[?2004lexit
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ exit
+exit
+
+Script done on 2022-07-06 19:55:21+03:00 [COMMAND_EXIT_CODE="0"]

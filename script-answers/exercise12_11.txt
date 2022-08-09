@@ -1,0 +1,32 @@
+Script started on 2022-08-10 00:23:50+03:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="120" LINES="30"]
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ sudo co[K[Kdocker container ls
+[sudo] password for dft: 
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+5bd98db9c9e9   redis     "docker-entrypoint.s…"   13 minutes ago   Up 13 minutes   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp     todo-backend_redis_1
+017c540f5f8d   mongo     "docker-entrypoint.s…"   38 minutes ago   Up 13 minutes   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend_mongo_1
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ sudo docker exec -it 5bd9 bash
+[?2004hroot@5bd98db9c9e9:/data# [Kroot@5bd98db9c9e9:/data# redis-cli KEYS *
+[?2004l1) "visits"
+2) "posts"
+[?2004hroot@5bd98db9c9e9:/data# redis-cli KEYS *      get posts
+[?2004l"114"
+[?2004hroot@5bd98db9c9e9:/data# redis-cli set posts 9001
+[?2004lOK
+[?2004hroot@5bd98db9c9e9:/data# redis-cli set posts 9001[5Pget posts
+[?2004l"9001"
+[?2004hroot@5bd98db9c9e9:/data# redis-cli get posts
+[?2004l"9002"
+[?2004hroot@5bd98db9c9e9:/data# redis  -co li del posts
+[?2004l(integer) 1
+[?2004hroot@5bd98db9c9e9:/data# redis-cli del posts[Kvisits
+[?2004l(integer) 1
+[?2004hroot@5bd98db9c9e9:/data# reis-cli KEYS *
+[?2004lbash: reis-cli: command not found
+[?2004hroot@5bd98db9c9e9:/data# reis-cli KEYS *[1@d
+[?2004l(empty array)
+[?2004hroot@5bd98db9c9e9:/data# exit
+[?2004lexit
+]0;dft@kone: ~/part12-containers-applications/script-answers[01;32mdft@kone[00m:[01;34m~/part12-containers-applications/script-answers[00m$ exit
+exit
+
+Script done on 2022-08-10 00:26:36+03:00 [COMMAND_EXIT_CODE="0"]

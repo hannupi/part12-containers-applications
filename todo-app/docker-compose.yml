@@ -20,10 +20,9 @@ services:
         volumes:
             - ./todo-backend/redis_data:/data
     backend:
-        image: backend-devs
+        image: backend-prod
         build:
             context: ./todo-backend/
-            dockerfile: dev.Dockerfile
         volumes:
             - ./todo-backend/:/usr/src/app
         ports:
@@ -31,21 +30,20 @@ services:
         environment:
             - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
             - REDIS_URL=redis://redis:6379
-        container_name: backend-devs
+        container_name: backend-prod
 
     app:
-        image: frontend-dev
+        image: frontend-prod
         build:
             context: ./todo-frontend/
-            dockerfile: dev.Dockerfile
+            dockerfile: Dockerfile
         volumes:
             - ./todo-frontend/:/usr/src/app
         ports:
             - 3000:80
         environment:
             - REACT_APP_BACKEND_URL=http://localhost:8080/api/
-            - PORT=80
-        container_name: frontend-dev
+        container_name: frontend-prod
     nginx:
         image: nginx:1.20.1
         volumes:

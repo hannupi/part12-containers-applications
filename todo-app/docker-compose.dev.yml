@@ -21,6 +21,8 @@ services:
             - ./todo-backend/redis_data:/data
     backend:
         image: backend-devs
+        build:
+            context: ./todo-backend/
         volumes:
             - ./todo-backend/:/usr/src/app
         ports:
